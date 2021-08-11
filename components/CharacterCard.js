@@ -4,10 +4,10 @@ import CharacterCardStyle from '../styles/CharacterCard.style'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import theme from '../themes/theme';
 
-const CharacterCard = ({character, navigation}) => {
-
+const CharacterCard = ({character, addFavorite, removeFavorite, navigation}) => {
+    
     const onPressHandler = () => {
-        navigation.navigate('CharacterDetails', {character});
+        navigation.navigate('CharacterDetails', {character, addFavorite, removeFavorite});
     }
 
     return (

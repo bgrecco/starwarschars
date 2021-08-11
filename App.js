@@ -1,11 +1,11 @@
-import React from 'react';
-import { View } from 'react-native';
-import AppStyle from './styles/App.style';
-import Header from './components/Header';
-import CharactersScreen from './components/CharactersScreen';
-import CharacterCardDetails from './components/CharacterCardDetails';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react'
+import { View } from 'react-native'
+import AppStyle from './styles/App.style'
+import Header from './components/Header'
+import CharacterCardList from './components/CharacterCardList'
+import CharacterCardDetails from './components/CharacterCardDetails'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 
 const Stack = createStackNavigator();
 
@@ -19,7 +19,7 @@ const App = () => {
                         header: () => null
                     }}
                 >
-                    <Stack.Screen name= 'CharactersScreen' component = {CharactersScreen}/>
+                    <Stack.Screen name= 'CharacterCardList' component = {CharacterCardList}/>
                     <Stack.Screen name= 'CharacterDetails' component = {CharacterCardDetails}/>
                 </Stack.Navigator>
             </NavigationContainer>
